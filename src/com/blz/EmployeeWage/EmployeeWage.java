@@ -14,14 +14,18 @@ public class EmployeeWage {
 		Random random = new Random();
 		int randomNum = random.nextInt(3);
 		
-		if(randomNum == 1) {
-			System.out.println("Employee is Present");
+		switch(randomNum) 
+		{
+		case 0: System.out.println("Employee is Absent");
+		    break;
+		case 1: System.out.println("Employee is Present");
 		salary= wagePerHour * fullDayHour;
+		    break;
+		case 2: salary= wagePerHour * halfDayHour;
+		     break;
 		}
-		else if (randomNum == 2)
-			salary = wagePerHour * halfDayHour;
-		else
-			System.out.println("Employee is Absent");
+	
+	
 		   System.out.println("Employee salary is: "+salary);
 
 	}
