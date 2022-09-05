@@ -11,11 +11,13 @@ public class EmployeeWage {
 		int salary = 0;
 		int workingDayPerMonth = 20;
 		int monthlySalary = 0;
+		int workingHourPerMonth = 0;
+		int days = 1;
 		
 		Random random = new Random();
 		int randomNum = random.nextInt(3);
 		
-		for(int i=1; i<=workingDayPerMonth; i++)
+		while(days!=20 && workingHourPerMonth!=100)
 		{		
 		switch(randomNum) 
 		{
@@ -25,11 +27,16 @@ public class EmployeeWage {
 		case 1: 
 			System.out.println("Employee is Present");
 		    salary= wagePerHour * fullDayHour;
+		    workingHourPerMonth = workingHourPerMonth + fullDayHour;
 		    break;
 		case 2: salary= wagePerHour * halfDayHour;
+		     workingHourPerMonth = workingHourPerMonth + halfDayHour;
 		     break;
 		}
-	      monthlySalary = monthlySalary + salary;
+		monthlySalary = monthlySalary + salary;
+		System.out.println("Day "+days+ ":"+salary);
+		days++;
+	      
 		}
 	
 		   System.out.println("Employee monthlySalary is: "+monthlySalary);
