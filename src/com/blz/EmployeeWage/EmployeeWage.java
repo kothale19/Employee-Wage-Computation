@@ -15,10 +15,11 @@ public class EmployeeWage {
 		int days = 1;
 		
 		Random random = new Random();
-		int randomNum = random.nextInt(3);
+		
 		
 		while(days!=20 && workingHourPerMonth!=100)
-		{		
+		{
+			int randomNum = random.nextInt(3);
 		switch(randomNum) 
 		{
 		case 0: 
